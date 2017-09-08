@@ -1,0 +1,42 @@
+#scoreBox h4{
+    display: inline-block;
+}
+
+#score{
+    display: inline-block;
+    border: thin solid black;
+    box-sizing: border-box;
+    width: 10%;
+    text-align: right;
+    padding:0.5%;
+}
+
+#locationBox{
+    text-align: center;
+}
+
+.locations {
+    display: inline-block;
+    vertical-align: top;
+    width: 22%;
+    height: 20em;
+    margin: auto 1%;
+    border:thin solid black;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.locForms {
+    padding-top: 40%;
+}
+
+#activities{
+    display: inline-block;
+    width: 95%;
+    height: 6em;
+    margin-left: 2.5%;
+    margin-top: 3%;
+    padding-left: 1%;
+    box-sizing: border-box;
+    border: thin solid black;
+}

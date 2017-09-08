@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gold! HA HA</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/indexStyle.css')}}">
+    </head>
+    <body>
+        <div id="scoreBox">
+            <h4>Your Gold</h4>
+            <div id="score">
+                score
+            </div>
+        </div>
+        <div id="locationBox">
+            <div class="locations">
+                <h2>Farm</h2>
+                <h3>(earns 10-20 gold)</h3>
+                <form class="locForms" action="/money" method="post">
+                    <input type="hidden" name="building" value="farm">
+                    <input type="submit" value="Get Gold!">
+                </form>
+            </div>
+            <div class="locations">
+                <h2>Cave</h2>
+                <h3>(earns 5-10 gold)</h3>
+                <form class="locForms" action="/money" method="post">
+                    <input type="hidden" name="building" value="cave">
+                    <input type="submit" value="Get Gold!">
+                </form>
+            </div>
+            <div class="locations">
+                <h2>House</h2>
+                <h3>(earns 2-5 gold)</h3>
+                <form class="locForms" action="/money" method="post">
+                    <input type="hidden" name="building" value="house">
+                    <input type="submit" value="Get Gold!">
+                </form>
+            </div>
+            <div class="locations">
+                <h2>Casino</h2>
+
+                <h3>(earns or loses 0-50 gold)</h3>
+                <form class="locForms" action="/money" method="post">
+                    <input type="hidden" name="building" value="casino">
+                    <input type="submit" value="Get Gold!">
+                </form>
+            </div>
+        </div>
+        <div id="activities">
+            <p>activities</p>
+        </div>
+    </body>
+</html>
