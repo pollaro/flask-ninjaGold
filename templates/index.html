@@ -4,12 +4,32 @@
         <meta charset="utf-8">
         <title>Gold! HA HA</title>
         <link rel="stylesheet" href="{{url_for('static',filename='css/indexStyle.css')}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var hour = new Date().getHours()
+                var minutes = new Date().getMinutes()
+                var month = new Date().getMonth()
+                var d = new Date().getDate()
+                var earnings = '{{ session['cash'] }}'
+                var place = '{{ session['location'] }}'
+                stringOut = 'Earned '+earnings+' gold from the '+place+' '+String(month)+' '+String(d)+' '+String(hour)+':'+String(minutes)
+                if (Number(earnings)>=0) {
+                    textColor = 'green'
+                } else {
+                    textColor = 'red'
+                }
+                appendString = '<span style=color:'+textColor+'>'+stringOut+'</span><br>'
+                $('#activities').append(sessionStorage.div+appendString)
+                sessionStorage.div = $('#activities').html()
+            })
+        </script>
     </head>
     <body>
         <div id="scoreBox">
             <h4>Your Gold</h4>
             <div id="score">
-                score
+                {{ session['money'] }}
             </div>
         </div>
         <div id="locationBox">
@@ -48,7 +68,8 @@
             </div>
         </div>
         <div id="activities">
-            <p>activities</p>
+
+
         </div>
     </body>
 </html>
